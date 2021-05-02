@@ -1,10 +1,10 @@
 import React from "react";
-import HomePage from "./pages/homepage/homepage.component";
 import './App.css'
+import MainContentWithRoute from './components/route/route.component'
 function App() {
   return (
     <div>
-      <HomePage />
+      <MainContentWithRoute />
     </div>
   );
 }
