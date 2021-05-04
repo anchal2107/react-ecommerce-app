@@ -1,19 +1,20 @@
-import  *  as Components from "./route.components_name.constants";
+import  *  as Components from "./constants.components";
+import * as Paths from './constants.path';
 const RouteData = [
   {
-    path: "/home",
+    path: Paths.PATH_HOMEPAGE,
     exact: false,
     component: Components.COMP_HOMEPAGE,
     key:1,
   },
   {
-    path: "/product",
+    path: Paths.PATH_SHOP,
     exact: false,
-    component: Components.COMP_PRODUCT,
+    component: Components.COMP_SHOP,
     key:2,
   },
   {
-    path: "/",
+    path: Paths.PATH_DEFAULT,
     exact: true,
     component: Components.COMP_HOMEPAGE,
     key:3,

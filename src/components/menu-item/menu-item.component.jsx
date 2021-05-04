@@ -5,13 +5,13 @@ const MenuItem = ({
   subtitle,
   imageUrl,
   css_size,
-  linkUrl,
+  routeName,
   history,
   match,
 }) => {
   return(<div
     className={`menu-item ${css_size != null ? css_size : ""}`}
-    onClick={() => history.push(`${match.url}${(match.url[match.url.length-1]!=='/')?'/':''}${linkUrl}`)}
+    onClick={() => history.push(`${match.url}${(match.url[match.url.length-1]!=='/')?'/':''}${routeName}`)}
   >
     <div
       className="class-background-image"

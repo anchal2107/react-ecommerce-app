@@ -1,7 +1,7 @@
 import HomePage from "../../pages/homepage/homepage.component";
-import Product from "../../pages/product/product.component";
+import Shop from "../../pages/shop/shop.component";
 const Components = {
-  homepage: HomePage,
-  product: Product,
+  HomePage,
+  Shop,
 };
 export default Components;

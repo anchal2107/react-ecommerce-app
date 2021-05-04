@@ -1,10 +1,16 @@
 import "./homepage.styles.scss";
 import  Directory  from "../../components/directory/directory.component";
-const HomePage = (props) => {
-  console.log(props);
+import { SECTIONS_DATA } from "../../data/directory.data";
+import { useState, useEffect } from "react";
+
+const HomePage = () => { 
+  const [sections, setSection] = useState([]);
+  useEffect(() => {
+    setSection(SECTIONS_DATA);
+  }, []);
   return (
     <div className="homepage">
-      <Directory/>
+      <Directory sectionsData={sections}/>
     </div>
   );
 };

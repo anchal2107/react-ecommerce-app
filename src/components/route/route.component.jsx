@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import RouteData from "./Route.data";
+import RouteData from "./data.route";
 import Components from "./export.components";
 const MainContentWithRoute = () => {
   return (
