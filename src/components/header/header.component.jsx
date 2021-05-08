@@ -1,19 +1,28 @@
+import { Link } from "react-router-dom";
+import { ReactComponent as Logo } from "../../assets/snakedragoncirclering.svg";
+import "./header.styles.scss";
+import * as Path from "../route/constants.path";
+import {auth } from '../../firebase/firebase.utils';
 
-import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from '../../assets/snakedragoncirclering.svg';
-import './header.styles.scss';
-import * as Path from '../route/constants.path'
-const Header = () => (
-  <div className='header'>
-    <Link className='logo-container' to='/'>
-      <Logo className='logo' />
+const Header = ({ currentUser }) => (
+  <div className="header">
+    <Link className="logo-container" to="/">
+      <Logo className="logo" />
     </Link>
-    <div className='options'>
-      <Link className='option' to={Path.PATH_SHOP}>
+    <div className="options">
+      <Link className="option" to={Path.PATH_SHOP}>
         SHOP
       </Link>
-      <Link className='option' to={Path.PATH_HOMEPAGE}>
-Home      </Link>
+      <Link className="option" to={Path.PATH_HOMEPAGE}>
+        Home
+      </Link>
+      {currentUser ? (
+        <div onClick={()=>{auth.signOut()}}>SignOut</div>
+      ) : (
+        <Link className="option" to={Path.PATH_SIGNINANDSIGNUP}>
+          SignIn And SignUp
+        </Link>
+      )}
     </div>
   </div>
 );

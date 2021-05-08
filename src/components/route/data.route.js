@@ -14,6 +14,12 @@ const RouteData = [
     key:2,
   },
   {
+    path: Paths.PATH_SIGNINANDSIGNUP,
+    exact: false,
+    component: Components.COMP_SIGNINANDSIGNUP,
+    key:2,
+  },
+  {
     path: Paths.PATH_DEFAULT,
     exact: true,
     component: Components.COMP_HOMEPAGE,
